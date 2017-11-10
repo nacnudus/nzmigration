@@ -1,46 +1,28 @@
----
-output:
-  md_document:
-    variant: markdown_github
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+nzmigration
+===========
 
-```{r, echo = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-"
-)
-```
+The `nzmigration` R package contains a single dataset, `nz_internal_migration_summary`, of summary statistics about internal migration in New Zealand from the 2013 census, from the [Spreadsheet File](http://m.stats.govt.nz/browse_for_stats/population/Migration/internal-migration/tables.aspx) published by Statistics New Zealand.
 
-# nzmigration
+This is not an official package of the New Zealand government and is not associated with the New Zealand government in any way.
 
-The `nzmigration` R package contains a single dataset,
-`nz_internal_migration_summary`, of summary statistics about internal migration
-in New Zealand from the 2013 census, from the [Spreadsheet
-File](http://m.stats.govt.nz/browse_for_stats/population/Migration/internal-migration/tables.aspx)
-published by Statistics New Zealand.
+The data was extracted from the spreadsheet by using the [tidyxl](https://nacnudus.github.io/tidyxl) and [unpivotr](https://nacnudus.github.io/unpivotr) packages.
 
-This is not an official package of the New Zealand government and is not
-associated with the New Zealand government in any way.
-
-The data was extracted from the spreadsheet by using the
-[tidyxl](https://nacnudus.github.io/tidyxl) and
-[unpivotr](https://nacnudus.github.io/unpivotr) packages.
-
-## Installation
+Installation
+------------
 
 You can install nzmigration from github with:
 
-```{r gh-installation, eval = FALSE}
+``` r
 # install.packages("devtools")
 devtools::install_github("nacnudus/nzmigration")
 ```
 
-## Example
+Example
+-------
 
-```{r example}
+``` r
 library(nzmigration)
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(scales))
@@ -63,4 +45,7 @@ nz_internal_migration_summary %>%
   facet_wrap(~var4, scales = "free_y") +
   scale_y_continuous(labels = percent) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+#> Warning: Removed 1 rows containing missing values (position_stack).
 ```
+
+![](README-example-1.png)
