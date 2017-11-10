@@ -1,6 +1,6 @@
 ---
-title: "Vignette Title"
-author: "Vignette Author"
+title: "nzmigration"
+author: "Duncan Garmonsway"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
