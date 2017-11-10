@@ -17,8 +17,8 @@
 #' * `flag` Only one flag is used, `..C`, to mean 'confidential'.
 #'
 #' @source
-#' \url{http://m.stats.govt.nz/~/media/Statistics/browse-categories/population/migration/internal-migration-tables/int-mig-2013-summary-tables.xlsx}
-#' \url{http://m.stats.govt.nz/browse_for_stats/population/Migration/internal-migration/tables.aspx}
+#' http://m.stats.govt.nz/~/media/Statistics/browse-categories/population/migration/internal-migration-tables/int-mig-2013-summary-tables.xlsx
+#' http://m.stats.govt.nz/browse_for_stats/population/Migration/internal-migration/tables.aspx
 #'
 "nz_internal_migration_summary"
 
